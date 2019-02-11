@@ -1,13 +1,19 @@
-body {
+@media only screen and (min-width: 1200px) {
     main {
         margin-left: 300px;
     }
+}
 
-    nav {
-        padding-left: 16px;
-    }
+nav {
+    padding-left: 16px;
+}
 
-    .sidenav {
-        margin-top: 64px;
+.sidenav {
+    margin-top: 64px;
+
+    li {
+        &.logo > img {
+            width: 300px;
+        }
     }
 }

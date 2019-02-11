@@ -36,6 +36,13 @@ class Whfrp3KotlinServerApplicationTests(@Autowired val restTemplate: TestRestTe
     }
 
     @Test
+    fun `Assert actions page title and status code`() {
+        val entity = restTemplate.getForEntity<String>("/actions")
+        assertThat(entity.statusCode).isEqualTo(HttpStatus.OK)
+        assertThat(entity.body).contains("<h1>Actions here</h1>")
+    }
+
+    @Test
     fun `Assert second page title, content and status code`() {
         println(">> TODO")
     }
