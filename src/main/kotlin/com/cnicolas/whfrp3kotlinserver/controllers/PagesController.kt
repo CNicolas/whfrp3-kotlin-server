@@ -15,7 +15,9 @@ class PagesController(@Autowired private val playerRepository: PlayerRepository)
     @GetMapping("/")
     fun home(model: ModelMap): ModelAndView {
         model["pageTitle"] = "Home"
-        model["players"] = playerRepository.findAll()
+        val players = playerRepository.findAll()
+        model["players"] = players
+        model["playersExist"] = players.isNotEmpty()
         return ModelAndView("home", model)
     }
 

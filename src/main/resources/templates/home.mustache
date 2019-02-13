@@ -24,12 +24,15 @@
             </div>
         </form>
 
-        <ul class="collection">
-            {{#players}}
-                <a href="/player/{{id}}"
-                   class="collection-item">{{name}}</a>
-            {{/players}}
-        </ul>
+
+        {{#playersExist}}
+            <ul class="collection">
+                {{#players}}
+                    <a href="/player/{{id}}"
+                       class="collection-item">{{name}}</a>
+                {{/players}}
+            </ul>
+        {{/playersExist}}
     </div>
 </main>
 

@@ -16,8 +16,10 @@ nav {
 .sidenav {
     margin-top: 64px;
 
-    li {
-        &.logo > img {
+    .logo {
+        padding: 0;
+
+        img {
             width: 300px;
         }
     }
