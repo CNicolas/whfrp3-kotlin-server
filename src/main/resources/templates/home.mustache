@@ -3,6 +3,34 @@
 
 <main>
     <h1>Home page</h1>
+    <div class="container">
+        <form method="post"
+              action="/player">
+            <div class="row">
+                <div class="input-field col s6">
+                    <input id="name"
+                           name="name"
+                           type="text">
+                    <label for="name">Player name</label>
+                </div>
+
+                <div class="input-field col s1 offset-l1">
+                    <button type="submit"
+                            class="btn waves-effect waves-light"
+                            name="createPlayer">Create player
+                        <i class="fas fa-plus right"></i>
+                    </button>
+                </div>
+            </div>
+        </form>
+
+        <ul class="collection">
+            {{#players}}
+                <a href="/player/{{id}}"
+                   class="collection-item">{{name}}</a>
+            {{/players}}
+        </ul>
+    </div>
 </main>
 
 {{> commons/footer}}

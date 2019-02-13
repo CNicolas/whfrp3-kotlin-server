@@ -1,4 +1,4 @@
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 990px) {
     main {
         margin-left: 300px;
     }
@@ -6,6 +6,11 @@
 
 nav {
     padding-left: 16px;
+
+    .sidenav-trigger {
+        cursor: pointer;
+        margin-left: 0;
+    }
 }
 
 .sidenav {
